@@ -11,7 +11,7 @@ import json
 import imdb
 import os
 PORT = int(os.environ.get('PORT', 5000))
-api_key= #Enter your Telegram bot token
+api_key= 1914162400:AAELE3mB3ZEPeGoNGaT4wUK5vae8E-1EP_4
 ia = imdb.IMDb() 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 def start(update, context):
-    update.message.reply_text('Hi! \nWelcome to the *IMDb Bot*. \nSend me the name of any movie or TV show to get its details. \nHappy viewing! \n \nCreated by [Karan Malik](https://karan-malik.github.io)',parse_mode='markdown')
+    update.message.reply_text('Hi! \nWelcome to the *ramananwithIMDb Bot*. \nSend me the name of any movie or TV show to get its details. \nHappy viewing! \n \nCreated by [Prajwal v k]',parse_mode='markdown')
 
 
 def help(update, context):
@@ -55,7 +55,7 @@ def reply(update, context):
 
 def main():
 
-    updater = Updater("1476373283:AAHrdQE394_J8qd78J974y_AwVdwrsis1r0", use_context=True)
+    updater = Updater("1914162400:AAELE3mB3ZEPeGoNGaT4wUK5vae8E-1EP_4", use_context=True)
     dp = updater.dispatcher
     
     dp.add_handler(CommandHandler("start", start))
@@ -65,8 +65,8 @@ def main():
 
     #updater.start_webhook(listen="0.0.0.0",
     #                      port=int(PORT),
-    #                      url_path="1476373283:AAHrdQE394_J8qd78J974y_AwVdwrsis1r0")
-    #updater.bot.setWebhook('https://imdb-movie-bot.herokuapp.com/' + "1476373283:AAHrdQE394_J8qd78J974y_AwVdwrsis1r0")
+    #                      url_path="1914162400:AAELE3mB3ZEPeGoNGaT4wUK5vae8E-1EP_4")
+    #updater.bot.setWebhook(' + "1914162400:AAELE3mB3ZEPeGoNGaT4wUK5vae8E-1EP_4")
     updater.start_polling()
     updater.idle()
 
